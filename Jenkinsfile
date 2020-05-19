@@ -39,14 +39,14 @@ node{
       }
     }
 
-    stage('Functional Test'){
-      dir('client'){
-        //see https://www.browserstack.com/local-testing/binary-params
-        browserstack(credentialsId: 'bd869689-b150-47e2-a1de-8344509f756d') {
-            sh 'node_modules/.bin/ng e2e --protractorConfig=e2e/browserstack_local.conf.js --port 4502'
-        }
-      }
-    }
+//    stage('Functional Test'){
+//      dir('client'){
+//        //see https://www.browserstack.com/local-testing/binary-params
+//        browserstack(credentialsId: 'bd869689-b150-47e2-a1de-8344509f756d') {
+//            sh 'node_modules/.bin/ng e2e --protractorConfig=e2e/browserstack_local.conf.js --port 4502'
+//        }
+//      }
+//    }
 
     stage('Results'){
         junit ('**/build/karma-reports/*.xml')
