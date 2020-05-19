@@ -31,9 +31,9 @@ module.exports = function (config) {
       }
     },
     sonarQubeUnitReporter: {
-      outputFile: require('path').join(__dirname, 'build/ut_report.xml'),
+      outputFile: 'build/ut_report.xml',
       suite: 'src/app',
-      useBrowserName: true
+      useBrowserName: false
     },
     coverageIstanbulReporter: {
       dir: require('path').join(__dirname, 'build/coverage'),
