@@ -58,6 +58,7 @@
     "karma-sonarqube-unit-reporter": "0.0.21",
     "nativescript-dev-webpack": "~1.4.0",
     "protractor": "~5.4.0",
+    "sonarqube-scanner": "^2.6.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
