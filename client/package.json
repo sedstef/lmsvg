@@ -9,6 +9,7 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
+    "test-ci": "ng test --code-coverage --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "android": "tns run android",
@@ -37,9 +38,9 @@
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "~0.803.0",
     "@angular/cli": "~8.3.0",
     "@angular/compiler-cli": "~8.2.0",
-    "@angular-devkit/build-angular": "~0.803.0",
     "@nativescript/schematics": "~1.0.0",
     "@nativescript/tslint-rules": "~0.0.5",
     "@types/jasmine": "~3.3.8",
@@ -53,6 +54,8 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
+    "karma-junit-reporter": "^2.0.1",
+    "karma-sonarqube-unit-reporter": "0.0.21",
     "nativescript-dev-webpack": "~1.4.0",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
