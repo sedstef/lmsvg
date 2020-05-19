@@ -34,7 +34,7 @@ node{
       dir('client'){
         sh 'npm run-script --silent -- ng lint --format=checkstyle lmsvg > build/checkstyle-result.xml'
         withSonarQubeEnv(credentialsId: '6a31ddf9-f37a-4d5b-9121-836b90abfe76') {
-            sh 'node sonar-analyse.js'
+            sh 'node sonarqube.js'
         }
       }
     }
