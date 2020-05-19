@@ -13,12 +13,18 @@ node{
         env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
         dir('client'){
             sh 'npm install'
+            sh 'npm install nativescript'
         }
     }
 
     stage('Build'){
       dir('client'){
         sh 'node_modules/.bin/ng build'
+        //build apk in platforms/android/app/build/outputs/apk/debug/app-debug.apk
+        sh 'node_modules/.bin/tns build android'
+        
+        //tns build ios only works on macOS
+        //sh 'node_modules/.bin/tns build ios'
       }
     }
 
