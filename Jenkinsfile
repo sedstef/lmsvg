@@ -9,8 +9,9 @@ node{
     stage('Prepare'){
         checkout scm
 
+        env.JAVA_HOME = "${tool(type: 'jdk', name: 'JDK 1.8')}"
         env.NODEJS_HOME = "${tool(type: 'nodejs', name: 'NodeJS 12.x')}"
-        env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
+        env.PATH="${env.JAVA_HOME}/bin:${env.NODEJS_HOME}/bin:${env.PATH}"
         dir('client'){
             sh 'npm install'
             sh 'npm install nativescript'
