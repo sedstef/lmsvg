@@ -15,6 +15,7 @@ node{
         dir('client'){
             sh 'npm install'
             sh 'npm install nativescript'
+            sh 'node_modules/.bin/tns doctor'
         }
     }
 
